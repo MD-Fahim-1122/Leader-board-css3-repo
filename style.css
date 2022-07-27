@@ -85,6 +85,7 @@ hr{
  .courses{
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 24px;
  }
   
   .course .course-banner img{
@@ -110,5 +111,40 @@ hr{
     border-radius: 14.6913px;
     font-size:14.69px ;
     justify-content: center;
+    color:#FF4A60 ;
+}
+ /*-------------------
+     Media Queries 
+ ---------------------*/
+
+
+ /* Mobile Devices */
+
+ @media only screen and (max-width:688px) {
+    .conteinar{
+        width: 100%;
+       
+    }
+    .players,.blogs,.courses{
+        grid-template-columns: repeat(1,1fr);
+        
+    }
+    .player,.blog{
+        flex-direction: column;
+ }
 }
 
+  /* Tablet Devices */
+  @media only screen and (min-width:688px) and (max-width:992px){
+    .conteinar{
+        width:100% ;
+    }
+    .players,.courses{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .blogs{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+f
+  }
